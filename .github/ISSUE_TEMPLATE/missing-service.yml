@@ -1,0 +1,39 @@
+name: Missing service
+description: A government service that should be offered as a next step but isn't.
+labels: [catalog]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Service name
+      placeholder: Apply for a Nova Scotia Health Card
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Which government runs it?
+      options: [Federal, Provincial or territorial, Municipal]
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Province, territory or city
+      placeholder: Nova Scotia
+  - type: input
+    id: url
+    attributes:
+      label: Official page (information)
+      placeholder: https://...
+    validations:
+      required: true
+  - type: input
+    id: action_url
+    attributes:
+      label: Official page where you actually apply, sign in, book or get the form
+      placeholder: https://...
+  - type: textarea
+    id: what
+    attributes:
+      label: What does it let people do, and what words would they use to ask for it?

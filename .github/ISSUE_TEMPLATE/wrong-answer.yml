@@ -1,0 +1,35 @@
+name: Wrong or missing answer
+description: An answer was wrong, out of date, incomplete, or pointed to the wrong service.
+labels: [answer]
+body:
+  - type: input
+    id: question
+    attributes:
+      label: What did you ask?
+      placeholder: How do I renew my health card in Manitoba?
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location set on the page (if any)
+      placeholder: Manitoba, Winnipeg
+  - type: textarea
+    id: got
+    attributes:
+      label: What did the answer say?
+      description: Paste the part that was wrong or missing. Leave out anything personal.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should it have said, and which official page shows that?
+      description: A link to the official government page is the most useful thing you can give us.
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options: [English, Français]
